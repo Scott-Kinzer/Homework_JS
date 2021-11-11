@@ -15,6 +15,22 @@ let num_7 = 16;
 let boolean_1 = true;
 let boolean_2 = false;
 
+let testVar = `
+    ${hello},
+    ${owu},
+    ${com},
+    ${ua},
+    ${num_1},
+    ${num_2},
+    ${num_3},
+    ${num_4},
+    ${num_5},
+    ${num_6},
+    ${num_7},
+    ${boolean_1},
+    ${boolean_2}
+   `
+
 console.log(
     hello,
     owu,
@@ -32,39 +48,11 @@ console.log(
 );
 
 alert(
-   `
-    ${hello},
-    ${owu},
-    ${com},
-    ${ua},
-    ${num_1},
-    ${num_2},
-    ${num_3},
-    ${num_4},
-    ${num_5},
-    ${num_6},
-    ${num_7},
-    ${boolean_1},
-    ${boolean_2}
-   `
+  testVar
 );
 
 document.write(
-    `
-    ${hello},
-    ${owu},
-    ${com},
-    ${ua},
-    ${num_1},
-    ${num_2},
-    ${num_3},
-    ${num_4},
-    ${num_5},
-    ${num_6},
-    ${num_7},
-    ${boolean_1},
-    ${boolean_2}
-   `
+   testVar
 );
 
 // - Переприсвоїти кожній змінній з завдання значення на довільне.
@@ -101,39 +89,11 @@ console.log(
 );
 
 alert(
-    `
-    ${hello},
-    ${owu},
-    ${com},
-    ${ua},
-    ${num_1},
-    ${num_2},
-    ${num_3},
-    ${num_4},
-    ${num_5},
-    ${num_6},
-    ${num_7},
-    ${boolean_1},
-    ${boolean_2}
-   `
+   testVar
 );
 
 document.write(
-    `
-    ${hello},
-    ${owu},
-    ${com},
-    ${ua},
-    ${num_1},
-    ${num_2},
-    ${num_3},
-    ${num_4},
-    ${num_5},
-    ${num_6},
-    ${num_7},
-    ${boolean_1},
-    ${boolean_2}
-   `
+   testVar
 );
 
 //- Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person. (Не об'єкт)
