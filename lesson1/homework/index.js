@@ -67,6 +67,8 @@ document.write(
    `
 );
 
+// - Переприсвоїти кожній змінній з завдання значення на довільне.
+//   Вивести кожну змінну за допомогою: console.log , alert, document.write
 
  hello = "hello_1";
  owu = "owu_2";
@@ -134,7 +136,7 @@ document.write(
    `
 );
 
-
+//- Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person. (Не об'єкт)
 
 let firstName = "Oleksandr";
 let middleName = "Romanovych";
@@ -142,14 +144,20 @@ let lastName = "Karpiv";
 
 let fullName = firstName + " " + middleName + " " + lastName;
 
-// let firstNamePrompt = prompt("Enter your name ");
-// let secondNamePrompt = prompt("Enter your second name ");
-// let yearsPrompt = prompt("Enter your age ");
-//
-// alert(`
-//     Congratulations ${firstNamePrompt} ${secondNamePrompt}. You are ${yearsPrompt}
-// `);
+// - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
+//     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
 
+let firstNamePrompt = prompt("Enter your name ");
+let secondNamePrompt = prompt("Enter your second name ");
+let yearsPrompt = prompt("Enter your age ");
+
+alert(`
+    Congratulations ${firstNamePrompt} ${secondNamePrompt}. You are ${yearsPrompt}
+`);
+
+
+// - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+//   let a = 100; let b = '100'; let c = true;
 
 let a = 100;
 let b = '100';
@@ -160,6 +168,11 @@ console.log(
     typeof b,
     typeof c
 );
+
+
+// - Визначити відповідний оператор в виразах що б вийшов відповідний результат.
+// В однакових виразах не використовувати однакові оператори!!!
+
 
 console.log(
     5 < 6 ,
