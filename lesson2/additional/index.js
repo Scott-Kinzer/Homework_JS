@@ -14,7 +14,7 @@ if (friends.length >= 3) {
 //   - Маємо 3 числа і між ним  нам потрібно знайти те що посередині.
 //  Знайти, яке з них є середнім (більше одного, але менше за інше). Перевірити, чи знаходиться перше число між двома іншими.
 
-let arr = [44,200,105];
+let arr = [30,20,60];
 
 
 let avaragePosition = arr[Math.floor(arr.length / 2)];
@@ -63,7 +63,7 @@ console.log(result);
 
 let randNum = -5;
 
-let ans = randNum < 0 ? "less than 0" : randNum > 0 ? "bigger than 0" : "equal to 0";
+let ans = randNum < 0 && randNum > -100 ? "less than 0" : randNum > 0  && randNum < 100 ? "bigger than 0" : "equal to 0";
 console.log(ans);
 
 
