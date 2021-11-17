@@ -66,6 +66,9 @@ let x = 0;
 //         clArr[i] = "okten";
 //     }
 // }
+
+
+console.log(clArr);
 //
 // console.log(clArr);
 //

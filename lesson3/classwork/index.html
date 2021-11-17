@@ -153,7 +153,7 @@
         document.write(`<div>
             <h2>${item.name} ${item.surname}. age is - ${item.age}</h2>
             <p>${item.info}</p>
-            <img src=${item.photo} alt="">
+            <img src=${item.photo} alt=""/>
         </div>`)
     }
 
@@ -197,6 +197,25 @@
 
         `)
     }
+
+
+    let arr = [1,0,6,0,3];
+    let lenArr = arr.length - 1;
+    let temp = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 0) {
+            arr.push(arr[i]);
+            for (let b = i; b < arr.length; b++) {
+                arr[b] = arr[b + 1];
+            }
+        }
+
+        if (i === lenArr) {
+            break
+        }
+    }
+
+    console.log(arr);
 </script>
 
 </body>
