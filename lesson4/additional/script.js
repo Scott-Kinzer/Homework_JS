@@ -5,7 +5,7 @@ function connect(a,b) {
     return b ? a + b : a;
 }
 
-console.log(connect(5, 6))
+// console.log(connect(5, 6))
 
 // - створити функцію  яка приймає два масиви та скаладає значення елементів
 // з однаковими індексами  та повертає новий результуючий масив.
@@ -105,4 +105,21 @@ function arr(arr_arg) {
     return arr.filter(item => item !== undefined);
 }
 
-console.log(arr([1,0,6,0,3]));
+// console.log(arr([1,0,6,0,3]));
+
+
+function validate(str) {
+    return              str.split('@').length === 2 ? str.split('@')[0].length > 0 ?
+                    str.split('@')[1].split('.').length === 2 &&
+                str.split('@')[0].split('.').length === 1  ?
+            str.split('@')[1].split('.')[0].length > 1 ?
+            "Валідація пройшла успішно" :
+                "Введіть коректну адресу типу 'ua', 'gmail" :
+                    "Зайва крапка або недостатньо крапок" :
+                        "Не правильна адреса перед равликом"  :
+                            "Ви ввели за багато равликів або взагалі не ввели";
+
+}
+
+console.log(validate("@ilgi.com"))
+
