@@ -14,16 +14,20 @@ let validName = (str) => {
     newArr.forEach((item, i) => {
         if (!(alphabet.includes(item.toUpperCase()))) {
             newArr[i] = " ";
-            newArr[i - 1] = alphabet.includes(newArr[i - 1].toUpperCase()) ? newArr[i - 1] : "";
-            newArr[i + 1] = alphabet.includes(newArr[i + 1].toUpperCase()) ? newArr[i + 1] : "";
+            if (newArr[i - 1])  {
+                newArr[i - 1] = alphabet.includes(newArr[i - 1].toUpperCase()) ? newArr[i - 1] : "";
+            }
 
+            if (newArr[i + 1])  {
+                newArr[i + 1] = alphabet.includes(newArr[i + 1].toUpperCase()) ? newArr[i + 1] : "";
+            }
         }
     })
 
     return newArr.join('')
 }
 
-// console.log(validName('Hermione__Granger'))
+console.log(validName('---Hermione...-- []545 Granger--'))
 
 // - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
 
