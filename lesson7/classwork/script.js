@@ -113,10 +113,12 @@ function Cinderella (name, age, footSize) {
     this.foot = footSize;
 }
 
-function Prince (name, age, shoeSize) {
-    this.name = name;
-    this.age = age;
-    this.shoe = shoeSize;
+class  Prince{
+    constructor(name, age, shoeSize) {
+        this.name = name;
+        this.age = age;
+        this.shoe = shoeSize;
+    }
 }
 
 let prince = new Prince("Bob", 25, 33);

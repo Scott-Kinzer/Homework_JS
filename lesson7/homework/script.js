@@ -39,34 +39,35 @@ let sortedArr = filterArrId.sort((a, b) => a.id - b.id);
 // створити пустий масив, наповнити його 10 об'єктами Client
 
 class Client {
-    constructor(name, id, surname, email, phone) {
+    constructor(name, id, surname, email, phone, order) {
         this.name = name;
         this.id = id;
         this.surname = surname;
         this.email = email;
         this.phone = phone;
+        this.order = order;
     }
 }
 
 
 let emptyArrClnts = [
-    new Client("name", 1, "surname", "email", "phone"),
-    new Client("name", 2, "surname", "email", "phone"),
-    new Client("name", 3, "surname", "email", "phone"),
-    new Client("name", 4, "surname", "email", "phone"),
-    new Client("name", 5, "surname", "email", "phone"),
-    new Client("name", 22, "surname", "email", "phone"),
-    new Client("name", 7, "surname", "email", "phone"),
-    new Client("name", 8, "surname", "email", "phone"),
-    new Client("name", 9, "surname", "email", "phone"),
-    new Client("name", 10, "surname", "email", "phone"),
+    new Client("name", 1, "surname", "email", "phone", ["ldskldsl, skdljflks, slekdjfk", "a[pdla", "lskmkflsm"]),
+    new Client("name", 2, "surname", "email", "phone", ["ldskldsl, skdljflks, slekdjfk", ";lsm;l"]),
+    new Client("name", 3, "surname", "email", "phone", ["ldskldsl, skdljflks, slekdjfk"]),
+    new Client("name", 4, "surname", "email", "phone", ["ldskldsl, skdljflkxsmnss, slekdjfk"]),
+    new Client("name", 5, "surname", "email", "phone", ["ldskldsl, skdljflks, slekdjfk"]),
+    new Client("name", 22, "surname", "email", "phone", ["ldskldsl, skdljflks, slekdjfk", "dkjvlkd"]),
+    new Client("name", 7, "surname", "email", "phone", ["ldskldsl, skdljflks, slekdjfk"]),
+    new Client("name", 8, "surname", "email", "phone", ["ldskldsl, skdljflks, slekdjfk", "ldskvj"]),
+    new Client("name", 9, "surname", "email", "phone", ["ldskldsl, skdljflks, slekdjfk"]),
+    new Client("name", 10, "surname", "email", "phone", ["ldskldsl,  slekdjfk"]),
 ];
 
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості
 // товарів в полі order по зростанню. (sort)
 
 
-let sortedArrClnts = emptyArrClnts.sort((a, b) => a.id - b.id);
+let sortedArrClnts = emptyArrClnts.sort((a, b) => a.order.length - b.order.length);
 // console.log(sortedArrClnts);
 
 
