@@ -109,24 +109,59 @@ let sortMonth = coursesAndDurationArray.filter(item => item.monthDuration > 5);
 
 // - Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов.
 // document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
+//
+// let cutString = (str, n) => {
+//     let arr = str.split("");
+//     let text = "";
+//     let emptyArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (!((i + 1) % n)) {
+//             text += arr[i];
+//             emptyArr.push(text);
+//             text = "";
+//         }   else {
+//             text += arr[i];
+//         }
+//
+//
+//     }
+//
+//     return emptyArr;
+// }
 
 let cutString = (str, n) => {
     let arr = str.split("");
     let text = "";
     let emptyArr = [];
-    for (let i = 0; i < arr.length; i++) {
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (!((i + 1) % n)) {
+    //         text += arr[i];
+    //         emptyArr.push(text);
+    //         text = "";
+    //     }   else {
+    //         text += arr[i];
+    //     }
+    //
+    //
+    // }
+    //
+    let p = arr.map((item, i) => {
         if (!((i + 1) % n)) {
-            text += arr[i];
+            text += item;
             emptyArr.push(text);
             text = "";
         }   else {
-            text += arr[i];
+            text += item;
         }
 
+    })
 
-    }
+    emptyArr.push(text)
+
 
     return emptyArr;
 }
+
+
 
 console.log(cutString("наслаждение", 3));
