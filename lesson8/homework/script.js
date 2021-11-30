@@ -10,7 +10,10 @@
 //     -- поміняти колір тексту у всіх елементів fc_rules на червоний
 
 let content = document.getElementById('content');
+let k = content.textContent;
 let rules = document.getElementById('rules');
+let b = rules.textContent;
+
 
 content.textContent = "Content";
 rules.textContent = "Rules";
