@@ -350,7 +350,4 @@ function showData(dataArr , list_wrapper) {
         list_wrapper.append(div);
     }
 
-
-
-
 }
