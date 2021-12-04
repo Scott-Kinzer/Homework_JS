@@ -285,7 +285,6 @@ function makeOverdose() {
         } else if (el.previousElementSibling){
             badi = el.previousElementSibling
         } else {
-
             if (el.parentElement.previousElementSibling) {
                 badi = el.parentElement.previousElementSibling;
                 num = 0;
@@ -308,5 +307,58 @@ function makeOverdose() {
 
 }
 
-makeOverdose();
+// makeOverdose();
+
+
+// - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
+
+function ChangePicture() {
+    this.arr = ['https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg',
+        'https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2019/07/Man-Silhouette.jpg',
+        'https://static.boredpanda.com/blog/wp-content/uploads/2014/01/animal-children-photography-elena-shumilova-2.jpg'];
+    this.i = 0;
+    this.img = document.querySelector('img');
+
+
+    this.nextPicture = function ()  {
+
+        if (this.i === this.arr.length - 1) {
+            this.img.src = this.arr[this.i];
+
+            this.i = 0;
+        } else {
+            this.img.src = this.arr[this.i];
+            this.i = this.i + 1;
+        }
+    }
+
+    this.prevPicture = function () {
+
+        if (this.i === 0) {
+            this.img.src = this.arr[this.i];
+
+            this.i = this.arr.length - 1;
+        } else {
+            this.img.src = this.arr[this.i];
+            this.i = this.i - 1;
+        }
+    }
+}
+
+let prevBtn = document.createElement('button');
+prevBtn.textContent = "PREVious";
+document.body.append(prevBtn)
+let nextBtn = document.createElement('button');
+nextBtn.textContent = "NEXTous";
+document.body.append(nextBtn)
+
+let pictures = new ChangePicture();
+prevBtn.addEventListener('click', () => {
+    pictures.prevPicture.bind(pictures)();
+})
+
+nextBtn.addEventListener('click', () => {
+    pictures.nextPicture.bind(pictures)();
+})
+
 
