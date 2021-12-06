@@ -98,7 +98,7 @@ function createMenu() {
     document.body.append(container);
 }
 
-// createMenu();
+createMenu();
 
 // - Создать список комментариев , пример объекта коментария
 // - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.

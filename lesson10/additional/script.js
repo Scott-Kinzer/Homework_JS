@@ -362,3 +362,17 @@ nextBtn.addEventListener('click', () => {
 })
 
 
+
+// Завдання важке для розуміння, але дуже легке в реалізації. Тут треба буде погуглити
+// *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
+
+
+
+function selection() {
+    if (window.getSelection)
+        console.log(window.getSelection())
+        return window.getSelection();
+
+}
+// selection();
+
