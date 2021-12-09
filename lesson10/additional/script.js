@@ -376,3 +376,5 @@ function selection() {
 }
 // selection();
 
+
+forEach
