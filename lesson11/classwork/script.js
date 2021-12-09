@@ -29,10 +29,10 @@ function chooseFavoriteCards() {
     wrapper.style.justifyContent = 'center';
     wrapper.style.flexWrap = 'wrap';
     document.body.append(wrapper);
-    let z = 0;
+
     for (let item of users) {
-        z = z + 1;
-        let b = z;
+
+
         let {name, age, status} = item;
         let card = document.createElement('div');
         card.style.width = '300px';
@@ -63,7 +63,19 @@ function chooseFavoriteCards() {
         wrapper.append(card);
 
         button.addEventListener('click', () => {
-            localStorage.setItem(`card_${b}`, JSON.stringify(item))
+
+
+            let existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+            if(existingEntries == null) existingEntries = [];
+
+            if (!existingEntries.map(item => item.name).includes(item.name)) {
+                existingEntries.push(item)
+            }
+
+
+            localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+
+
         })
 
     }

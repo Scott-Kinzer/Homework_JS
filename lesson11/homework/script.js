@@ -44,12 +44,18 @@ let loadLocalStorage = () => {
 
     submit.addEventListener('click', (e) => {
         e.preventDefault();
-        let inputs = document.querySelectorAll('input');
-        localStorage.setItem("ArrayOfDataCar",JSON.stringify([...inputs].map(item => item.value)))
+
+
+        let existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+        if(existingEntries == null) existingEntries = [];
+
+        existingEntries.push({model: model.value, type: type.value, volume: volume.value})
+
+        localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 
         setTimeout(() =>
             {
-                console.log(localStorage.getItem("ArrayOfDataCar"))
+                console.log(localStorage.getItem("allEntries"))
             }, 5000
         )
 
@@ -57,4 +63,4 @@ let loadLocalStorage = () => {
 
 }
 
-// loadLocalStorage();
+loadLocalStorage();
