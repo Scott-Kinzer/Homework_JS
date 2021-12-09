@@ -68,7 +68,9 @@ function chooseFavoriteCards() {
             let existingEntries = JSON.parse(localStorage.getItem("allEntries"));
             if(existingEntries == null) existingEntries = [];
 
-            if (!existingEntries.map(item => item.name).includes(item.name)) {
+            if (!existingEntries.map(item => `${item.name} ${item.age} ${item.status}`).
+                includes(`${item.name} ${item.age} ${item.status}`)
+            ) {
                 existingEntries.push(item)
             }
 
