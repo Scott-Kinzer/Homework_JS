@@ -44,6 +44,8 @@ let loadLocalStorage = () => {
 
     submit.addEventListener('click', (e) => {
         e.preventDefault();
+        let [model, ite, volume] = document.querySelectorAll('input');
+        console.log(model.value, ite.value, volume.value);
 
 
         let existingEntries = JSON.parse(localStorage.getItem("allEntries"));
@@ -64,3 +66,16 @@ let loadLocalStorage = () => {
 }
 
 loadLocalStorage();
+
+
+
+let [firstInput, secondInput] = document.querySelectorAll('input');
+
+let obj = {
+    name: firstInput.value,
+    age: secondInput.value
+}
+
+
+
+localStorage.setItem('Lala', JSON.stringify(obj));
