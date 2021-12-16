@@ -21,3 +21,17 @@
     margin: 10px;
     min-height: 80px;
 }
+
+.card {
+    padding: 10px 0 10px 0;
+    cursor: pointer;
+    background-color: #bad3ee!important;
+}
+
+.card-header {
+    width: 100%;
+}
+
+.btn {
+    margin-top: 10px;
+}

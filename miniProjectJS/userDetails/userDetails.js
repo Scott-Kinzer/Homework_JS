@@ -52,9 +52,13 @@ window.onload = async () => {
     infoUserCard.append(buttonPosts);
     wrapper.append(infoUserCard);
 
-    buttonPosts.addEventListener('click', async () => {
-        let posts = document.querySelector('.posts');
+    buttonPosts.classList.add('btn');
+    buttonPosts.classList.add('btn-success');
 
+    buttonPosts.addEventListener('click', async () => {
+
+        let posts = document.querySelector('.posts');
+        posts.innerHTML = '';
         let postsOfUser = await fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
             .then(data => data.json());
         console.log(postsOfUser);
@@ -63,13 +67,16 @@ window.onload = async () => {
             let titleWrapper = document.createElement('div');
             titleWrapper.classList.add('title-wrapper')
             let title = document.createElement('div');
+            title.classList.add('title');
             title.textContent = post.title;
 
             let buttonShowDetails = document.createElement('button');
             buttonShowDetails.textContent = 'show post details';
+            buttonShowDetails.classList.add('btn');
+            buttonShowDetails.classList.add('btn-secondary');
             titleWrapper.append(title, buttonShowDetails);
             buttonShowDetails.addEventListener('click', () => {
-                window.location.replace(`../postDetails/index.html${"#"+"postDetails/"+post.id}`);
+                window.location.assign(`../postDetails/index.html${"#"+"postDetails/"+post.id}`);
             });
 
             posts.append(titleWrapper);
